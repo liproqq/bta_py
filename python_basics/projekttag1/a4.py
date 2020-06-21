@@ -15,6 +15,8 @@
 # 2
 # https://de.wikipedia.org/wiki/Euklidischer_Abstand
 
+from functools import reduce
+
 def abstand2D(a=(0, 0), b=(2, 2)):
     return (((a[0]-b[0])**2) + (a[1]-b[1])**2)**0.5
 
@@ -27,14 +29,16 @@ print(f"Aufgabe 1: {abstand2D(a, b)}")
 def abstandND(a, b):
     # auffüllen mit Nullen bei fehlenden Werten?
     if len(a) != len(b): return "Punkte haben nicht die selbe Dimension"
-    sum = 0
-    # reduce?
-    for n in range(len(a)):
-        sum += (a[n]-b[n])**2
-    return sum**0.5
+    # reduce
+    return reduce(lambda prev, curr: (curr[0]-curr[1])**2, zip(a, b))**0.5
+    # for loop
+    # sum = 0
+    # for n in range(len(a)):
+    #     sum += (a[n]-b[n])**2
+    # return sum**0.5
 
 
-m = (1, 8, 0, 0, 0, 0)
-n = (0, 0, 9, 2, 0, 5)
+m = (0, 0, 0, 0, 0, 0)
+n = (0, 0, 0, 0, 0, 5)
 
 print(f"Aufgabe 2: {abstandND(m, n)}")
