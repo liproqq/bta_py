@@ -27,6 +27,7 @@ def Schaltjahr(jahr):
         print("Durch 4 teilbar und nicht durch 100")
     return ergebnis
 
+
 for n in range(50):
     zufallszahl = random.randint(1582, 2020)
     print(f"{zufallszahl} {Schaltjahr(zufallszahl)}")

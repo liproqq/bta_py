@@ -25,9 +25,9 @@ class Verein():
         self.vorstandsvorsitzender = ""
         self.mitglieder = []
 
-    def mitgliedHinzufuegen(self, mitglied):
-        self.mitglieder.append(mitglied)
-        print(f"{mitglied} ist dem Verein begetreten")
+    def mitgliedHinzufuegen(self, *mitglied):
+        self.mitglieder.extend(*mitglied)
+        print(", ".join(*mitglied), " ist/sind dem Verein begetreten")
 
     def vorstandWaehlen(self):
         self.vorstand = []
@@ -36,12 +36,12 @@ class Verein():
             if vorstandskandidat not in self.vorstand:
                 self.vorstand.append(vorstandskandidat)
         self.vorsitzendenWaehlen()
-        print(f"Neuer Vorstand: {self.vorstand}")
+        print("Neuer Vorstand: ", *self.vorstand)
 
     def vorsitzendenWaehlen(self):
-        vorstand = random.choice(self.vorstand)
-        print(f"{vorstand} ist der neue Vorstandvorsitzende")
-        self.vorstandsvorsitzender = vorstand
+        vorsitzender = random.choice(self.vorstand)
+        print(f"{vorsitzender} ist der neue Vorstandvorsitzende")
+        self.vorstandsvorsitzender = vorsitzender
 
     def mitgliedEntlassen(self, mitglied):
         if mitglied not in self.mitglieder:
@@ -57,9 +57,9 @@ class Verein():
 
 if __name__ == '__main__':
     bayer04 = Verein("Bayer 04 Leverkusen")
-    for i in ["Hradecky", "Tapsoba", "S: Bender", "Tah", "Sinkgraven",
-              "Aranguiz", "Demirbay", "Weiser", "Bailey", "Havertz", "Bellarabi"
-              ]:
-        bayer04.mitgliedHinzufuegen(i)
+    mitgliederliste = ["Hradecky", "Tapsoba", "S. Bender", "Tah", "Sinkgraven",
+                       "Aranguiz", "Demirbay", "Weiser", "Bailey", "Havertz",
+                       "Bellarabi"]
+    bayer04.mitgliedHinzufuegen(mitgliederliste)
     bayer04.vorstandWaehlen()
-    bayer04.mitgliedEntlassen("Weiser")
+    bayer04.mitgliedEntlassen(random.choice(mitgliederliste))

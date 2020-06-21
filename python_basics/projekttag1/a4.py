@@ -21,10 +21,11 @@ def abstand2D(a=(0, 0), b=(2, 2)):
 
 a = (1, 1)
 b = (1, 2)
-print(f"Aufgabe 1: {abstand2D(a, b) == 1}")
+print(f"Aufgabe 1: {abstand2D(a, b)}")
 
 
 def abstandND(a, b):
+    # auffüllen mit Nullen bei fehlenden Werten?
     if len(a) != len(b): return "Punkte haben nicht die selbe Dimension"
     sum = 0
     # reduce?
@@ -33,7 +34,7 @@ def abstandND(a, b):
     return sum**0.5
 
 
-m = (0, 0, 0, 0, 0, 0)
-n = (0, 0, 0, 0, 0, 5)
+m = (1, 8, 0, 0, 0, 0)
+n = (0, 0, 9, 2, 0, 5)
 
 print(f"Aufgabe 2: {abstandND(m, n)}")

@@ -16,11 +16,7 @@
 # 1) Berechne die Fibonacci-Folge bis zum n. Element. (n wird eingelesen)
 # 2) Berechne die Fibonacci-Folge bis zum n. Element rekursiv.
 
-import time
-
 seq_len = 33
-
-t0 = time.time()
 
 
 def fib_seq(n):
@@ -32,9 +28,6 @@ def fib_seq(n):
 
 
 print(fib_seq(seq_len))
-print(time.time()-t0)
-
-t1 = time.time()
 
 
 def rec_fib(n):
@@ -49,4 +42,3 @@ def rec_seq(x):
 
 
 print(rec_seq(seq_len))
-print(time.time()-t1)
