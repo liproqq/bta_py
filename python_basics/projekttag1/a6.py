@@ -30,11 +30,12 @@ class Verein():
         print(", ".join(*mitglied), " ist/sind dem Verein begetreten")
 
     def vorstandWaehlen(self):
-        self.vorstand = []
-        while len(self.vorstand) < 5:
-            vorstandskandidat = random.choice(self.mitglieder)
-            if vorstandskandidat not in self.vorstand:
-                self.vorstand.append(vorstandskandidat)
+        # self.vorstand = []
+        # while len(self.vorstand) < 5:
+        #     vorstandskandidat = random.choice(self.mitglieder)
+        #     if vorstandskandidat not in self.vorstand:
+        #         self.vorstand.append(vorstandskandidat)
+        self.vorstand = random.sample(self.mitglieder, 5)
         self.vorsitzendenWaehlen()
         print("Neuer Vorstand: ", *self.vorstand)
 
