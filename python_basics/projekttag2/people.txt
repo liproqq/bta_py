@@ -1,0 +1,3 @@
+['Adam Ries', 'Pythagoras', 'Hypatia', 'Girolamo Cardano', 'Leonhard Euler', 'Carl Friedrich Gauss', 'Georg Cantor', 'Paul Erdös', 'John Horton Conway', 'Grigori Perelman', 'Terry Tao']
+['Aristoteles', 'Nikolaus Kopernikus', 'Galileo Galilei', 'Johannes Kepler', 'Blaise Pascal', 'Christiaan Huygens', 'Isaac Newton', 'Marie Curie', 'Daniel Bernoulli', 'Leonhard Euler', 'Joseph-Louis Lagrange', 'Emmy Noether', 'Erwin Schrödinger', 'Stephen Hawking']
+['Aristoteles', 'Demokrit', 'Heraklit', 'Platon', 'Sokrates', 'Thales von Milet', 'Epikuros von Samos']
