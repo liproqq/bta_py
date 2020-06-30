@@ -1,0 +1,44 @@
+
+
+QWidget {
+    background-color: #eaeaea;
+    width: 75%;
+}
+
+ QTextEdit:active {
+     background-color: #565655;
+     color: white;
+ }
+ QComboBox {
+     background-color: blue;
+     color: white;
+
+ }
+QPushButton  {
+    background-color: black;
+    color: white;
+    padding: 5,5,5,5;
+    border-style: outset;
+    border-width: 2px;
+    border-color: red;
+}
+
+QPushButton:hover  {
+    background-color: red;
+    color: white;
+    padding: 5,5,5,5;
+    border-style: outset;
+    border-width: 2px;
+    border-color: red;
+}
+/*
+QHBoxLayout {
+    background-color: #dedede;
+}
+
+QVBoxLayout {
+    border: 2px black;
+    padding: 1, 1, 1, 1;
+    background-color: #565656;
+}
+/*

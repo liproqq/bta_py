@@ -20,6 +20,7 @@ class Fields_DB():
 
     def initDB(self):
         con = sql.connect(self.db_name)
+        con.execute("PRAGMA foreign_keys = ON")
         c = con.cursor()
 
         c.execute("""
