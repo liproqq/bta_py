@@ -1,5 +1,4 @@
 from modules.fields_db import Fields_DB
-from pathlib import Path
 
 db = Fields_DB("test")
 
