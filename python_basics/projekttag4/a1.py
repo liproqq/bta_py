@@ -9,19 +9,19 @@ def func1(line):
 
 
 def func2(line):
-    return line**2
+    return np.square(line)
 
 
 def func3(line):
-    return line**.5
+    return np.sqrt(line)
 
 
-plt.plot(func1(line))
-plt.plot(func2(line))
-plt.plot(func3(line))
+plt.plot(line, func1(line), label="x*3+5")
+plt.plot(line, func2(line), label="x²")
+plt.plot(line, func3(line), label="√x")
 plt.xlabel("X-Achse")
 plt.ylabel("Y-Achse")
-plt.title("-10 - 10 Funktionen")
-plt.legend(["Funktion 1", "Funktion 2", "Funktion 3"])
+plt.title("Funktionen")
+plt.legend()
 
 plt.show()

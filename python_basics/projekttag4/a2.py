@@ -18,9 +18,10 @@ for i in range(len(to_repl)):
 
 print("Aufgabe 1:", df["Year of Birth"].unique())
 
-print(df.groupby("Year of Birth")["Count"].sum())
+print("Aufgabe 2:", df.groupby("Year of Birth")["Count"].sum())
 
-print(df.groupby(["Year of Birth", "Gender"])["Count"].sum())
+print("Aufgabe 3:", df.groupby(["Year of Birth", "Gender"])["Count"].sum())
 
 plt.plot(df.groupby("Year of Birth")["Count"].sum())
+plt.ylim(0, 150000)
 plt.show()
