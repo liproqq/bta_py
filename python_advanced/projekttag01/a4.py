@@ -1,11 +1,11 @@
 from multiprocessing import (Process, Lock, Value,
-                             current_process, active_children)
-from time import sleep, time
+                             current_process)
+from time import sleep
 from random import randint
 
 
-def stackingRobot(delay, amount, lock, stack):
-    for i in range(amount):
+def stackingRobot(delay, lock, stack):
+    for i in range(randint(15, 25)):
         with lock:
             sleep(delay)
             stack.value += 1
@@ -22,12 +22,12 @@ def orderRobot(lock, stack):
 
 
 if __name__ == "__main__":
-    stack = Value("i")
+    stack = Value("i", 0)
     lock = Lock()
     robot1 = Process(target=stackingRobot,
-                     args=(0.2, randint(15, 25), lock, stack))
+                     args=(0.2, lock, stack))
     robot2 = Process(target=stackingRobot,
-                     args=(0.3, randint(15, 25), lock, stack))
+                     args=(0.3, lock, stack))
 
     robot3 = Process(target=orderRobot, args=(lock, stack), daemon=True)
 

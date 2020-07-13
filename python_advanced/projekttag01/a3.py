@@ -11,11 +11,13 @@ def calcSurface(*args):
     return surface
 
 
-li1 = [np.random.uniform(1, 11) for i in range(10)]
-li2 = [np.random.uniform(1, 11) for i in range(10)]
+# li1 = [np.random.uniform(1, 11) for i in range(10)]
+# li2 = [np.random.uniform(1, 11) for i in range(10)]
 
-# stack two lists and transpose to get 2d from 10d
-pairs = np.array((li1, li2)).T
+# # stack two lists and transpose to get 2d from 10d
+# pairs = np.array((li1, li2)).T
+
+pairs = np.random.uniform(1, 11, size=(10, 2))
 
 if __name__ == "__main__":
     pool = Pool()
