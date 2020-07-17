@@ -1,0 +1,5 @@
+Query: 51375 	 Temp: 21.3 	 Gefühlt: 19.78 	 Beschreibung: Mäßig bewölkt
+Query: 51375 	 Temp: 21.3 	 Gefühlt: 19.78 	 Beschreibung: Mäßig bewölkt
+Query: Leverkusen 	 Temp: 21.29 	 Gefühlt: 19.77 	 Beschreibung: Mäßig bewölkt
+Query: München 	 Temp: 19.25 	 Gefühlt: 16.36 	 Beschreibung: Ein paar Wolken
+Query: Paris 	 Temp: 23.87 	 Gefühlt: 23.98 	 Beschreibung: Bedeckt
