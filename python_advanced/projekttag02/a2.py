@@ -9,8 +9,6 @@ path = Path(__file__).parent
 app = Flask(__name__)
 api = Api(app)
 
-api_endpoint = "http://api.openweathermap.org/data/2.5/onecall"
-
 
 class Koor(Resource):
     def get(self, query):
@@ -50,7 +48,7 @@ class Weather(Resource):
         feels_like = data["main"]["feels_like"]
         description = data["weather"][0]["description"]
 
-        result = f"""Query: {query} \t Temp: {temp} \t Gefühlt: {feels_like} \t 
+        result = f"""Query: {query} \t Temp: {temp} \t Gefühlt: {feels_like} \t
                      Beschreibung: {description}\n"""
         with open(path / "log.txt", "a") as file:
             file.write(result)
