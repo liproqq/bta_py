@@ -40,7 +40,7 @@ df["year"] = pd.to_datetime(df["Date"]).dt.year
 df["Total Volume"] = df[["S", "L", "XL"]].sum(axis=1)
 
 # print(df[df["Total Volume"] == df[["S", "L", "XL"]
-#                                    ].sum(axis=1)].notnull().all())
+#                                   ].sum(axis=1)].notnull().all())
 df["Total Bags"] = df[["Small Bags", "Large Bags", "XLarge Bags"]].sum(axis=1)
 # print(df[df["Total Bags"] == df[["Small Bags",
 #                                  "Large Bags",
@@ -50,7 +50,8 @@ df["Total Bags"] = df[["Small Bags", "Large Bags", "XLarge Bags"]].sum(axis=1)
 
 df["Revenue"] = df["AveragePrice"]*df["Total Volume"]
 
-print(df.groupby(["year", "type"])["Revenue"].sum().unstack("type"))
+print(df.groupby(["year", "type"])["Revenue"].sum())
+
 
 df.groupby(["year", "type"])["Revenue"].sum().unstack("type").plot.bar()
 
