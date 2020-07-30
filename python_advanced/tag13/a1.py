@@ -1,8 +1,6 @@
 import numpy as np
 from matplotlib import pyplot as plt
 
-import tensorflow
-
 
 class LinearRegession:
     def __init__(self, eta=1e-4, epochs=25):
@@ -41,13 +39,13 @@ class LinearRegession:
 
 if __name__ == "__main__":
     # Create dataset
-    X = 2 * np.random.rand(1000, 1)
+    X = 2 * np.random.rand(5, 1)
 
-    y = 5 + 2 * X + np.random.rand(1000, 1)
+    y = 5 + 2 * X + np.random.rand(5, 1)
 
     plt.scatter(X, y)
 
-    for i in range(250):
+    for i in range(5):
         lr = LinearRegession(epochs=i)
         lr.fit(X, y)
         plt.plot(X, lr.predict(X), label=str(i))
